@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/input.css">
+</head>
+<body>
+    <form class="inputt" method="post">
+        <input name="surama" class="suraaa" type="text" placeholder="Qanaqa so'z kerak? (O'zbekcha so'z qidiring!)">
+        <input class="submit" type="submit" value="Qidirish">
+    </form>
+
+    <div class="borderr">
+        <table>
+            <tr>
+                
+                <td style="width: 500px">{{salom}}
+                    <button id="myButton" style="background-color: white; border: none; cursor: pointer;"><img style="width: 15px;" src="../static/sound.png"></button>
+                    <audio id="myAudio">
+                       <source src="salom.mp3" type="audio/mpeg">
+                    </audio>
+                </td>
+
+                <td>{{tarj}}
+                    <button id="youButton" style="background-color: white; border: none; cursor: pointer;"><img style="width: 15px;" src="../static/sound.png"></button>
+                    <audio id="youAudio">
+                        <source src="hello.mp3" type="audio/mpeg">
+                    </audio>
+                </td>
+                
+            </tr>
+        </table>
+    </div>
+    
+    <script defer>
+        var button1 = document.getElementById("youButton");
+        var audio1 = document.getElementById("youAudio");
+
+        button1.addEventListener("click", function() {
+            audio1.currentTime = 0;
+            audio1.play();
+        });
+
+        var button2 = document.getElementById("myButton");
+        var audio2 = document.getElementById("myAudio");
+
+        button2.addEventListener("click", function() {
+            audio2.currentTime = 0;
+            audio2.play();
+        });
+
+    </script>
+</body>
+</html>
